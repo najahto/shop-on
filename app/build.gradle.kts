@@ -20,6 +20,10 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        // fakestoreapi Base URL
+        buildConfigField("String", "API_BASE_URL", "\"https://fakestoreapi.com/\"")
+
     }
 
     buildTypes {
@@ -40,6 +44,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
