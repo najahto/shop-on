@@ -2,6 +2,7 @@ package com.najahto.shopon
 
 import android.app.Application
 import com.najahto.shopon.di.networkModule
+import com.najahto.shopon.di.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -15,7 +16,8 @@ class ShopOnApp : Application() {
             androidLogger()
 
             modules(listOf(
-                networkModule
+                networkModule,
+                repositoryModule
             ))
         }
     }
